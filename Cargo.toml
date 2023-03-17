@@ -6,7 +6,7 @@ description = "Rust library for efficient calculation of statistics from streami
 repository = "https://github.com/jwallbridge/fast-stats"
 documentation = "https://docs.rs/fast-stats"
 readme = "README.md"
-keywords = [ "statistics", "streaming", "stats", "standard deviation" ]
+keywords = [ "statistics", "streaming", "stats", "stddev" ]
 license = "MIT"
 edition = "2021"
 
