@@ -1,6 +1,13 @@
 [package]
 name = "fast-stats"
 version = "0.1.0"
+authors = ["James Wallbridge <james.wallbridge@gmail.com>"]
+description = "Rust library for efficient calculation of statistics from streaming data"
+repository = "https://github.com/jwallbridge/fast-stats"
+documentation = "https://docs.rs/fast-stats"
+readme = "README.md"
+keywords = [ "statistics", "streaming", "stats", "standard deviation" ]
+license = "MIT"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
