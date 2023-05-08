@@ -21,10 +21,10 @@ impl Stats {
         self.sum_of_squares += x * x;
         self.length += 1;
 
-        if self.max == None || self.max < Some(x) {
+        if self.max.is_none() || self.max < Some(x) {
             self.max = Some(x)
         };
-        if self.min == None || self.min > Some(x) {
+        if self.min.is_none() || self.min > Some(x) {
             self.min = Some(x)
         };
     }
@@ -97,7 +97,7 @@ impl Stats {
         }
     }
 
-    pub fn append(&mut self, other: &mut Vec<f64>) {
+    pub fn append(&mut self, other: &mut [f64]) {
         other.iter().for_each(|x| self.push(*x));
     }
 
@@ -224,10 +224,10 @@ impl Stats {
         x
     }
 
-    pub fn trim(&mut self, len: usize) {
+    pub fn trim(&mut self, index: usize) {
         let length = self.length;
-        if len < length {
-            for _ in 0..len {
+        if index < length {
+            for _ in 0..index {
                 self.remove(0);
             }
         }

@@ -25,10 +25,10 @@ where usize: AsPrimitive<T>
         self.sum_of_squares += x * x;
         self.length += 1;
 
-        if self.max == None || self.max < Some(x) {
+        if self.max.is_none() || self.max < Some(x) {
             self.max = Some(x)
         };
-        if self.min == None || self.min > Some(x) {
+        if self.min.is_none() || self.min > Some(x) {
             self.min = Some(x)
         };
     }
@@ -101,7 +101,7 @@ where usize: AsPrimitive<T>
         }
     }
 
-    pub fn append(&mut self, other: &mut Vec<T>) {
+    pub fn append(&mut self, other: &mut [T]) {
         other.iter().for_each(|x| self.push(*x));
     }
 
